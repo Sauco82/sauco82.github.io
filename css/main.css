@@ -1,0 +1,616 @@
+/*! Based on HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+/* ====== Colors ======
+
+black: #222;
+red: #ec4835;
+green: #89a02c;
+
+==============================*/
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+}
+
+h2, h3 {
+    font-size: 2.5em;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #89a02c;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ec4835;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #ec4835;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ec4835;
+    color: white;
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.main-content {
+    width: 1100px;
+    margin: 0 auto;    
+}
+
+/* ==============  Header   ============== */
+.header {
+    min-height: 60px;    
+    width: 100%;
+    top: 0;    
+    position: fixed;    
+    background: white;
+    z-index: 2;
+    margin: 0;
+}
+
+.header__menu {
+    position: absolute;
+    right: 20px;    
+}
+
+.header__menu__item {
+    padding: 10px 0px 10px 30px;
+}
+
+.header__menu__link {
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s color;
+}
+
+    .header__menu__link:hover {
+        color: #ec4835;
+    }
+
+
+
+/* ==============  Intro   ============== */
+
+.intro {
+    background: #89a02c;
+    height: 220px;
+    margin-top: 60px; 
+    margin-bottom: 100px;
+    position: relative;   
+}
+
+.intro__img {
+    margin-top: -68px;
+    position: relative;   
+    z-index: 3; 
+}
+
+.intro__text {
+    font-family: 'Lobster', cursive;
+    color: white;
+    width: 600px;
+    font-size: 37px;
+    margin-top: 30px;
+}
+
+.intro__text strong {
+    color: black;
+    font-weight: normal;    
+}
+
+/* ==============  Highlight   ============== */
+
+.highlights {
+    margin-bottom: 60px;
+    overflow: hidden;
+} 
+ 
+.highlight {
+    width: 28%;
+    height: 200px;
+    margin-left: 8%;    
+    position: relative;
+}
+    .highlight:first-child {
+        margin-left: 0;
+    }
+
+.highlight--frontend {
+    background: url(../img/frontend_black.png) no-repeat 50% 0;
+}
+
+.highlight--design {
+    background: url(../img/design_black.png) no-repeat 50% 0;
+}
+
+.highlight--backend {
+    background: url(../img/backend_black.png) no-repeat 50% 14px;
+}
+
+.highlight__text {
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+/* ==============  Chart   ============== */
+
+.skillset {
+    width: 90%;
+    height: 400px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    display: block;
+}
+
+.skillset__bar {
+    fill: #89a02c;
+    cursor:pointer;
+    transition: 0.3s fill;
+}
+    .skillset__bar:hover { fill: #ec4835 }
+
+
+.skillset__back {
+    fill: #ec4835;
+    transition: 0.3s fill;
+    font-size: 14px;
+    cursor:pointer;
+}
+    .skillset__back:hover {fill: #89a02c;}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.x.axis text {
+    font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+
+/* ==============  Layout   ============== */
+
+.section__img {
+    float: left;
+    max-width: 330px;
+    margin: 55px 80px;
+}
+.section__description {
+    float: right;
+    width: 600px;
+}
+
+.section__description,
+.section__img {
+    transition: 0.6s all;
+}
+
+.inactive .section__img {
+    margin-left: -100px;
+    opacity: 0;
+}
+.inactive .section__description {
+    margin-right: -100px;
+    opacity: 0;
+}
+
+/* =================== Specific sections =================================== */
+
+.frontend,
+.design,
+.backend,
+.experience,
+.education,
+.others {
+    margin-bottom: 100px;
+}
+
+
+.experience__title {
+    font-size: 2.5em;
+
+}
+.companies {
+    list-style: none;
+    padding: 0;
+}
+
+.company__title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.company__period {
+    margin: 0 0 1em 0;
+    color: #666;
+    font-weight: normal;
+}
+
+.company__tasks {
+    font-size: 0.9em;
+}
+
+/* ============================ Footer ===================================*/
+
+.footer {
+    background: #222;    
+    padding: 60px 0 150px 0;
+}
+
+.footer__header {
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.footer__item {
+    width: 33%;
+    text-align: center;    
+}
+
+.footer__link {
+    color: white;  
+    text-decoration: none;
+}    
+
+.footer__icon {
+    font-size: 70px;
+    margin: 0
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.horizontal-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.horizontal-list li {
+    float: left;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Media Queries 
+   ========================================================================== */
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 1em; 
+    }
+
+    .main-content {
+        width: 700px;
+    }
+
+    .header {
+        font-size: 0.9em;
+    }
+        .header li { padding: 5px 0 0px 10px; }
+
+    .intro {
+        height: 160px;
+    }
+
+    .intro__img {
+        width: 256px;
+        margin-top: -50px;
+    }
+
+    .intro__text {
+        font-size: 25px;
+        width: 400px;
+    }
+        .intro__text br {display: none;}
+
+    .highlight {
+        height: 230px;
+    }
+        .highlight a {display: block}
+
+
+    .section__img,
+    .section__description {
+        margin: 10px auto;
+        float: none;
+        display: block;
+    }
+
+    .section__img {
+        width: auto;
+    }
+
+    .section__description,
+    .education__sample  {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .experience {
+        padding-top: 120px;
+        background: url(../img/experience2.png) 50% 0 no-repeat;
+        background-size: 90%
+    }
+        .experience img {display: none}
+    
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 1em; 
+    }
+
+    .header,
+    .main-content {
+        width: 100%;
+    }
+
+    .header {
+        padding-bottom: 10px;
+    }
+    .header__menu {
+        margin-top: 10px;
+    }
+
+    .intro { 
+        background: none;
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+    
+    .intro__img { display: none }
+
+    .intro__text {
+        float:none;
+        color: #222;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .skillset,
+    .highlights { display: none }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    .header,
+    .footer,
+    .highlights,
+    .skillset,
+    .section__img{
+        display: none;
+    }
+
+    .intro { 
+        background: none;
+        height: auto;
+        margin:0;
+    }    
+    .intro__img { display: none }
+    .intro__text {
+        float:none;
+        color: #222;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .intro__text br {display: none;}
+
+    h3 {margin: 0}
+
+    .main-content,
+    .section__description {
+        width: 90%;
+        margin: 0;
+    }
+
+
+    .education__sample  {
+        width: 81%;
+        margin: 0 auto;
+    }
+
+    .frontend,
+    .design,
+    .backend,
+    .experience,
+    .education,
+    .others,
+    .intro,
+    .section {
+        margin-bottom: 0px; 
+    }
+
+    * {
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ===========================================================
+    Icon Fonts Generated with Icomoon
+    ========================================================== */
+
+@font-face {
+    font-family: 'sauco';
+    src: url('../img/sauco.eot');
+}
+@font-face {
+    font-family: 'sauco';
+    src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype'),
+         url(data:application/font-woff;charset=utf-8;base64,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) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'sauco';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope-o:before {
+    content: "\f003";
+}
+.icon-print2:before {
+    content: "\f02f";
+}
+.icon-github-alt:before {
+    content: "\f113";
+}
