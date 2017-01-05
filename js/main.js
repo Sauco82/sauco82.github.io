@@ -5,6 +5,7 @@ $(function(){
 	changeSkillSet();
 	scrollAnimations();
 	activateMenuToggle();
+	calculateExperienceYears()
 });
 
 
@@ -24,19 +25,19 @@ function scrollAnimations() {
 			$('#header').addClass('hide');
 		} else {
 			$('#header').removeClass('hide');
-		}		
+		}
 
 		lastOffset = newOffset;
 
 		// Animate sections
 		if ( sections.length ) {
-			sections.each(function(){			
+			sections.each(function(){
 				if ( newOffset > ($(this).offset().top - positionTrigger) ) {
 					$(this).removeClass('inactive');
 				}
 			});
-			sections = $('.inactive');			
-		} 
+			sections = $('.inactive');
+		}
 
 	})
 }
@@ -53,7 +54,7 @@ function activateMenuToggle() {
 	})
 }
 
-function animateNavigation() {	
+function animateNavigation() {
 	$('a').click(function() {
 		var destination = $(this).attr('href');
 
@@ -71,7 +72,20 @@ function scrollTo(id) {
 
 	$('html, body').animate({
 	    scrollTop: scroll
-	 }, 600);	
+	 }, 600);
 }
 
 
+function calculateExperienceYears() {
+	$(".js-experience").each( function(t){
+		var $this = $(this),
+				year = $this.data("year"),
+				month = $this.data("month"),
+				today  = new Date(),
+				currentYear = today.getFullYear(),
+				currentMonth = today.getMonth() + 1,
+				experience = currentYear - year + (currentMonth - month)/12;
+
+		$this.html(experience.toFixed(1));
+	})
+}
