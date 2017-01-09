@@ -110,7 +110,8 @@ var skillset = {
 	html_skills: [
 		{ name: "CSS", value: 9500 },
 		{ name: "HTML", value: 9500 },
-		{ name: "smacss", value: 8000 },
+		{ name: "SMACSS", value: 8500 },
+		{ name: "Atomic Design", value: 8000 },
 		{ name: "LESS", value: 9000 },
 		{ name: "SCSS", value: 9000 },
 		{ name: "Architecture", value: 9000 }

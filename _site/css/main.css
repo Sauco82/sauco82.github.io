@@ -40,6 +40,7 @@ html {
 a {
     color: #89a02c;
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 a:hover {
@@ -130,7 +131,7 @@ a:hover {
 }
 
 .intro__text strong {
-    color: #ba2a0e;
+    color: black;
     font-weight: normal;
 }
 
